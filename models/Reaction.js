@@ -17,7 +17,8 @@ const responseSchema = new Schema(
     },
     createdAt: {
       type: Date,
-      default: Date.now,
+      default: Date.now, 
+      get:e=>e.toLocaledDateString()
     },
   },
   {
